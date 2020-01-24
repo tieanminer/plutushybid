@@ -65,11 +65,12 @@ def process(new, private_key, address, database):
 	   address in database[2] or \
 	   address in database[3]:
 		with open('KEYS.txt', 'a') as file:
-			file.write('Private Key: ' + str(private_key) + '\n' +
-				   'Word Seed: ' + str(new) + '\n' +
-			           'address: ' + str(address) + '\n\n')                      
+			file.write('Private Key: ' + str(private_key) + '|' +
+				   'Word Seed: ' + str(new) + '|' +
+			           'Address: ' + str(address) + '\n')
+		print(str(address) + '|' + str(private_key) + "|\x1b[1;32mW000000000000000000000000000000000000000000000000000T!!!\x1b[0m")
 	else: 
-		print('Address = ', str(address), '\n', 'Private Key = ', str(private_key), '\n', 'Seed = ', str(new))
+		print(str(address) + '|' + str(private_key))
 
 def main(database):
 	"""
