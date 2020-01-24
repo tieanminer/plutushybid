@@ -11,7 +11,6 @@ from mnemonic import Mnemonic
 from random import choice, seed
 from binascii import hexlify, unhexlify
 
-n = 2048
 DATABASE = r'database/JAN_07_2020/'   
 
 def b2h(b):
